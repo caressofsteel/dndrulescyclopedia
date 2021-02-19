@@ -1,0 +1,27 @@
+%DR--------------------------------------------------------
+% ADD -V subparagraph to command line
+%\usepackage{titlesec}
+%\newcommand{\sectionbreak}{\clearpage}
+%DR--------------------------------------------------------
+
+%DR--------------------------------------------------------
+% BEGIN SHADE QUOTES BOX
+\usepackage{framed}
+\usepackage{quoting}
+
+\definecolor{bgcolor}{HTML}{D8EDCB}
+\colorlet{shadecolor}{bgcolor}
+\setlength{\OuterFrameSep}{4pt}
+% define a new environment shadedquotation. You can change leftmargin and
+% rightmargin as you wish.
+\newenvironment{shadedquotation}
+ {\begin{shaded*}
+  \quoting[leftmargin=0em, rightmargin=0pt, vskip=0pt, font=itshape]
+ }
+ {\endquoting
+ \end{shaded*}
+ }
+
+\def\quote{\shadedquotation}
+\def\endquote{\endshadedquotation}
+%DR--------------------------------------------------------

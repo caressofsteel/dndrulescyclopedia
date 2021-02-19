@@ -1,0 +1,652 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather:700,700italic,300,300italic);
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+@font-face {
+    font-family: 'Ubuntu Mono';
+    src: url('../fonts/UbuntuMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu Mono';
+    src: url('../fonts/UbuntuMono-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu Mono';
+    src: url('../fonts/UbuntuMono-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Ubuntu Mono';
+    src: url('../fonts/UbuntuMono-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+::selection { 
+    background: rgb(148, 106, 164); 
+    color: white;
+}
+
+.MathJax {
+font-size: 0.9rem !important;
+}
+
+h2 span.MathJax{
+font-size: 0.8rem !important;
+}
+
+img.emoji {
+    height: 25px;
+    vertical-align:middle;
+}
+
+div.sourceCode{
+   margin: 15px 0 15px 0;
+   background-color: #f7f9ff;
+   border-color: rgba(108, 107, 128, 0.12);
+   border-style: groove;
+   border-width: 1px;
+   padding: 8px 5px;
+   border-radius: 9px;
+   font-size:1.03rem;
+}
+
+.example > div.sourceCode{
+  background-color: #eff3ff;
+}
+
+pre.hidden{
+  margin: 15px 0 15px 0;
+  background-color: #f7f9ff;
+  border-color: rgba(108, 107, 128, 0.12);
+  border-style: groove;
+  border-width: 1px;
+  padding: 8px 5px;
+  border-radius: 9px;
+  font-size:1.03rem;
+}
+
+code > span.im {
+    color: #1130dc;
+    font-weight: bold;
+}
+
+code > span.pp {
+    color: #1130dc;
+}
+
+td.lineNumbers{
+  width: 45px;
+}
+
+div.figure{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin: 36px auto;
+}
+
+.nobreak{
+    white-space: pre !important;
+}
+
+.caption{
+	text-align: center;
+  margin-top: 2px;
+  font-size: 0.9rem;
+}
+
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+a:hover,
+a:focus,
+a:visited:hover,
+a:visited:focus {
+    color: #ff4b10;
+}
+
+.show:hover {
+    color: red;
+    background-color: rgba(198, 155, 230, 0.66);
+}
+
+.show {
+    cursor: pointer;
+    background-color: rgba(212, 140, 241, 0.28);
+    padding: 3px 5px;
+    border-radius: 3px;
+    font-size: 0.85rem;
+    font-family: sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+iframe{
+  width:100%;
+  outline: none; border:0;
+  border-style:none;
+  margin: 0;
+  padding: 0;
+  height: 500px;
+  resize: vertical;
+}
+
+iframe.plotly {
+  scrolling="no";
+}
+
+iframe.hlight{
+  margin: 15px 0 15px 0;
+  background-color: #f7f9ff;
+  border-color: rgba(108, 107, 128, 0.12);
+  border-style: groove;
+  border-width: 1px;
+  padding: 8px 5px;
+  border-radius: 9px;
+}
+
+div.example{
+    margin:35px 3px;
+    background-color: rgba(201, 150, 222, 0.07);
+    padding: 1px 35px 8px 35px;
+    border-radius: 23px;
+    border-style: dotted;
+    border-width: 1px;
+    border-color: rgba(212, 130, 175, 0.48);
+}
+
+div.example.output{
+    margin: 35px 0;
+    padding: 1px 35px 8px 35px;
+    border-radius: 10px;
+    border-style: dotted;
+    border-width: 1px;
+}
+
+div.example.input{
+    margin: 35px 0;
+    background-color: #f7f9ff;
+    padding: 1px 35px 8px 35px;
+    border-radius: 10px;
+    border-style: dotted;
+    border-width: 1px;
+    border-color: rgba(220, 10, 126, 0.13);
+}
+
+.highlight{
+    background-color: rgba(255, 255, 33, 0.8);
+}
+
+.attn{
+    background-color: rgba(255, 255, 33, 0.8);
+    color: rgba(255, 0, 0, 0.95) !important;
+}
+
+.red{
+    color: rgba(255, 0, 0, 0.95) !important;
+}
+
+.green{
+    color: rgb(0, 187, 0) !important;
+}
+
+.blue{
+    color: rgba(0, 0, 255, 0.81) !important;
+}
+
+.magenta{
+    color:magenta !important;
+}
+
+.old{
+    color:red !important;
+    text-decoration: line-through;
+}
+
+.new{
+    color:blue !important;
+}
+
+.uline{
+    text-decoration: underline;
+}
+
+.box{
+    outline-width: 1px;
+    outline-style: solid;
+    padding: 1px 3px;
+    outline-color: black;
+    display: inline-block;
+}
+
+.ptxt{
+    color: #111111;
+    font-family: "Merriweather", serif;
+    font-size: 1rem;
+    font-style: inherit;
+    white-space: normal;
+    overflow-wrap: inherit;
+}
+
+p > code.sc,
+p > span.sc,
+h1 > span.sc,
+h2 > span.sc,
+h3 > span.sc,
+h4 > span.sc,
+h5 > span.sc,
+h6 > span.sc
+{
+  font-family: inherit;
+  font-style: inherit;
+  font-variant: small-caps;
+}
+
+.scaps{
+  font-family: inherit;
+  font-style: inherit;
+  font-variant: small-caps;
+  color: inherit;
+}
+
+html {
+background: #424348;
+color: #111111;
+font-family: "Minion ", serif;
+font-size:1.025rem;
+overflow-x: hidden;
+background-image: url(../images/dungeontile-4.jpg);
+background-position: left top;
+background-size: auto;
+background-repeat: repeat;
+background-attachment: fixed;
+}
+
+body {
+background: #ffffff;
+overflow-x: hidden;
+min-width: 512px;
+width: 100%;
+padding: 5px 10px;
+margin: 0;
+}
+
+p {
+font-size: 1rem;
+line-height: 1.83rem;
+margin: 15px 0;
+text-align: justify;
+text-justify: inter-word;
+overflow-wrap: break-word;
+}
+
+@media (min-width: 950px){
+
+    html {
+    background: #424348;
+    color: #111111;
+    font-family: "Merriweather", serif;
+    overflow-x: hidden;
+    background-image: url(../images/dungeontile-4.jpg);
+    background-position: left top;
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    }
+
+	body {
+    background: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
+    padding: 15px 110px 30px 100px;
+    max-width: 1100px;
+    }
+
+    p {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.83rem;
+    margin: 15px 0;
+    text-align: justify;
+    text-justify: inter-word;
+    }
+
+    div.example{
+    margin: 35px 20px;
+    }
+}
+
+
+figure,
+footer,
+header,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
+a {
+    background-color: transparent;
+}
+
+a,
+a:visited {
+    color: #413998;
+    text-decoration: none;
+    transition: all .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+a:hover,
+a:focus,
+a:visited:hover,
+a:visited:focus {
+    color: #ff4b10;
+}
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+dfn {
+    font-style: italic;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 54px;
+    line-height: 3.375rem;
+    text-align: center;
+    margin: 40px 0 36px 0;
+}
+
+h2 {
+    font-size: 25px;
+    font-size: 1.5rem;
+    line-height: 37.5px;
+    line-height: 2.34375rem;
+    margin: 36px 0 18px 0;
+}
+
+h3 {
+    font-size: 17px;
+    font-size: 1.15rem;
+    line-height: 25.5px;
+    line-height: 1.59375rem;
+    font-weight: 700;
+    margin: 25px 0 12px 0;
+}
+
+h4 {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 24px;
+    line-height: 1.5rem;
+    margin: 25px 0 12px 0;
+}
+
+h5 {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 24px;
+    line-height: 1.5rem;
+    margin: 20px 0 12px 0;
+}
+
+h6 {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 24px;
+    line-height: 1.5rem;
+    margin: 0 0 10px 0;
+}
+
+dl p{
+	margin: 0 0 15px 0;
+}
+
+dl dt{
+
+    font-weight: bold;
+}
+
+
+.footnotes p{
+    font-size: 0.93rem;
+    line-height: 1.7rem;
+    margin-left: 10px;
+}
+
+li {
+    margin: 0.1rem 0;
+    line-height: 1.6rem;
+}
+
+div[style*="white-space: pre-line;"]{
+
+line-height: 1.6rem;
+margin: 15px 0;
+}
+
+blockquote {
+font-family: 'Lato', serif;
+font-size: 20px;
+font-style: italic;
+width: 85%;
+margin: 0.1em auto;
+padding: 0.25em 40px;
+line-height: 1.45;
+position: relative;
+color: #383838;
+/*background-color: rgb(214, 246, 214);*/
+background-color: rgb(227, 253, 227);
+}
+
+blockquote:before {
+display: block;
+content: "\201C";
+font-size: 80px;
+position: absolute;
+left: 3px;
+top: -15px;
+color: #7a7a7a;
+}
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+img {
+    border: 0;
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img .center {
+    border: 0;
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+hr {
+    border-top: 1px dotted rgb(144, 140, 140);
+    margin: 20px 0;
+}
+
+pre {
+    display: block;
+    line-height: 110%;
+    margin: 0 0 10.5px;
+    padding: 1px;
+    margin: 1px;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: "Ubuntu Mono", monospace;
+    font-size: 1.03em;
+    overflow-x:auto;
+}
+
+p code, li code{ 
+    font-size:1.05em;
+    color: #da4747;
+}
+
+p code.blend, li code.blend {
+    color: inherit;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+/*@media (max-width: 720px) {*/
+    /* For mobile phones: */
+    table{
+        width: 100%;
+        font-size: 1.1rem;
+        margin: 0 0 10px 0;
+    }
+/*}*/
+
+@media (min-width: 720px){
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 85%;
+    }
+}
+
+table th {
+    background: #5e685d;
+    border-bottom: none;
+    color: #ffffff;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+table th a,
+table th a:visited {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+}
+
+table th img {
+    display: block;
+    margin-left: 5px;
+}
+
+table tr.even {
+    background: transparent;
+    border-bottom: none;
+}
+
+table tr.odd {
+    background-color: rgba(222, 241, 220, 0.48);
+    border-bottom: none;
+}
+
+table tr.drag-previous {
+    background: #ffd;
+}
+
+table td,
+table th {
+    border-bottom: none;
+    padding: 14px 5px 14px 25px;
+}
+
+table td {
+    padding: 10px 15px;
+}
+
+table td.active {
+    background: transparent;
+}
+
+.container {
+    max-width: 1220px;
+    margin-left: auto;
+    margin-right: auto;
+}

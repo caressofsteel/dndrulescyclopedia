@@ -1,0 +1,46 @@
+---
+### // Config
+latex-engine: xelatex
+
+### // Meta
+pagetitle: "Test"
+title-meta: 'Unofficial Dungeons & Dragons Rules Cyclopedia House Rules & Errata Companion'
+author-meta: 'caressofsteel'
+date-meta: 'February 12, 2021'
+subject: 'Dungeons & Dragons'
+keywords:
+  - 'dungeons and dragons'
+  - 'rules cyclopedia'
+  - 'unofficial'
+  - 'house rules'
+  - 'errata'
+
+### // Document 
+documentclass: extarticle
+output: pdf_document
+papersize: a4paper
+toc: false
+colorlinks: true
+links-as-notes: false
+geometry:
+  - top=1cm
+  - bottom=2.5cm
+  - left=2.5cm
+  - right=2.5cm
+  - heightrounded
+#css: pandoc_css_test.css
+
+### // Fonts
+# if documentclass=extarticle (8pt, 9pt, 10pt, 11pt, 12pt, 14pt, 17pt, 20pt)
+fontsize: 12pt
+#mainfont: "Merriweather"
+mainfont: "Consolas"
+mainfontoptions:
+- UprightFont=*
+- BoldFont=*-Bold
+- ItalicFont=*-Italic
+- BoldItalicFont=*-Bold Italic
+#fontfamily: merriweather  
+#fontfamilyoptions:
+#- sfdefault
+---
